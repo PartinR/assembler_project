@@ -1,6 +1,7 @@
 #include "../include/stdafx.h"
 #include "../include/Instruction.h"
 #include "../include/Errors.h"
+#include <sstream>
 
 string RemoveComment(string line) {
     size_t pos = line.find(';');
