@@ -20,7 +20,15 @@ public:
         ST_End                  // end instruction.
     };
     // Parse the Instruction.
-    InstructionType ParseInstruction( string a_line );
+    InstructionType ParseInstruction( string a_line )
+    {
+        a_line = RemoveComment(a_line);
+        if(!ParseLine(a_line, m_Label, m_OpCode, m_Operand1, m_Operand2))
+        {
+            // TODO: Record an error
+        }
+        return ST_Comment;
+    }
 
     // Compute the location of the next instruction.
     int LocationNextInstruction( int a_loc );
