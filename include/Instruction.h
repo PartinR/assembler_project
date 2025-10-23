@@ -43,7 +43,8 @@ private:
     // The elemements of a instruction
     string m_Label;        // The label.
     string m_OpCode;       // The symbolic op code.
-    string m_Operand;      // The operand. 
+    string m_Operand1;      // The operands. 
+    string m_Operand2; 
 
     string m_instruction;  // The original instruction.
 
