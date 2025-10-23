@@ -39,6 +39,8 @@ public:
 
 private:
 
+    string RemoveComment(string line);
+    bool ParseLine(const string& line, string& label, string& opcode, string& operand1, string &operand2);
 
     // The elemements of a instruction
     string m_Label;        // The label.
