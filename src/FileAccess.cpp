@@ -47,4 +47,3 @@ void FileAccess::rewind( )
     m_sfile.clear();
     m_sfile.seekg( 0, ios::beg );
 }
-    
