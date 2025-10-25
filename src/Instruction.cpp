@@ -11,8 +11,45 @@ string RemoveComment(string line) {
     }
     return line.erase(pos);
 }
-// Will parse a line into label, op code, and operand.
-bool ParseLine(const string& line, string& label, string& opcode, string& operand1, string &operand2)
+
+/**/
+/*
+NAME
+
+    ParseLine - parses line into label, opcode, operand1, and operand2
+
+SYNOPSIS
+
+    bool ParseLine( const string& line, string& label, string& opcode, string& operand1, string& operand2 );
+        line        -> The assembly instruction line to be parsed.
+        label       -> Recieves the label portion of the instruction, otherwise empty.
+        opcode      -> Recieves the operation code from the instruction line.  
+        operand1    -> Receives the first operand following, if present. Set to empty if no operand.
+        operand2    -> Receives the second operand following, if present. Set to empty if no operand.
+    
+DESCRITPION
+
+    This function parses an assembly instruction line into its key components: the label, opcode,
+    and up to two operands. If the line begins with a non-whitespace character, it is assigned to 
+    the label. Otherwise, the parser skips the label field and extracts the opcode and operands
+    sequentially.
+
+RETURNS
+
+    Returns true if the line was parsed and no extra tokens were collected. Returns false
+    if an extra token was collected.
+
+AUTHOR
+
+    Race Partin
+
+DATE
+
+    12:50pm 10/25/2025
+
+*/
+/**/
+bool ParseLine( const string& line, string& label, string& opcode, string& operand1, string& operand2 )
 {
     istringstream ins(line);
     label = opcode = operand1 = operand2 = "";
