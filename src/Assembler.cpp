@@ -1,9 +1,10 @@
 //
 //      Implementation of the Assembler class.
 //
-#include "stdafx.h"
-#include "Assembler.h"
-#include "Errors.h"
+#include "../include/stdafx.h"
+#include "../include/Assembler.h"
+#include "../include/Instruction.h"
+#include "../include/Errors.h"
 
 // Constructor for the assembler.  Note: we are passing argc and argv to the file access constructor.
 // See main program.  
