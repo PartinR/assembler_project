@@ -19,6 +19,15 @@ DESCRIPTION
 
     This function will place the symbol "a_symbol" and its location "a_loc"
     in the symbol table.
+
+AUTHOR
+
+    Race Partin
+
+DATE
+
+    01:07pm 10/25/2025
+
 */
 void 
 SymbolTable::AddSymbol( const string &a_symbol, int a_loc )
