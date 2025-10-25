@@ -3,7 +3,35 @@
 #include "../include/Errors.h"
 #include <sstream>
 
-string RemoveComment(string line) {
+/*
+NAME
+
+    RemoveComment - removes comments defined by a semicolon in an assembly line.
+
+SYNOPSIS
+
+    string RemoveComment( string line );
+        line        -> The assembly instruction line that may contains a comment.
+
+DESCRIPTION
+
+    This function recieves an assembly instruction line and removes any portion of the line following a
+    semicolon (';'). If no semicolon is present, the line is returned unchanged.
+
+RETURNS
+
+    The input line with any comment (text after a semicolon) removed.
+
+AUTHOR
+
+    Race Partin
+
+DATE
+
+    01:04pm 10/25/2025
+
+*/
+string RemoveComment( string line ) {
     size_t pos = line.find(';');
     if (pos == string::npos)
     {
@@ -12,11 +40,10 @@ string RemoveComment(string line) {
     return line.erase(pos);
 }
 
-/**/
 /*
 NAME
 
-    ParseLine - parses line into label, opcode, operand1, and operand2
+    ParseLine - parses line into label, opcode, operand1, and operand2.
 
 SYNOPSIS
 
@@ -48,7 +75,6 @@ DATE
     12:50pm 10/25/2025
 
 */
-/**/
 bool ParseLine( const string& line, string& label, string& opcode, string& operand1, string& operand2 )
 {
     istringstream ins(line);
