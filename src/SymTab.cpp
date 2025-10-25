@@ -4,7 +4,6 @@
 #include "stdafx.h"
 #include "SymTab.h"
 
-/**/
 /*
 NAME
 
@@ -21,7 +20,6 @@ DESCRIPTION
     This function will place the symbol "a_symbol" and its location "a_loc"
     in the symbol table.
 */
-/**/
 void 
 SymbolTable::AddSymbol( const string &a_symbol, int a_loc )
 {
