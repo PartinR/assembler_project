@@ -2,6 +2,7 @@
 // Class to parse and provide information about instructions.  Note: you will be adding more functionality.
 //
 #pragma once
+#include "Errors.h"
 
 // The elements of an instruction.
 class Instruction {
