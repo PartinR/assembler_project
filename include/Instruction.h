@@ -26,7 +26,7 @@ public:
         a_line = RemoveComment(a_line);
         if(!ParseLine(a_line, m_Label, m_OpCode, m_Operand1, m_Operand2))
         {
-            Errors::RecordError("Failed to parse instruction: " + a_line );
+            Errors::RecordError("Failed to parse instruction: " + a_line);
         }
         return ST_Comment;
     }
