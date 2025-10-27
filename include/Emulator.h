@@ -5,7 +5,7 @@
 #define _EMULATOR_H
 #include <assert.h>
 
-class emulator {
+class Emulator {
 
 public:
 
