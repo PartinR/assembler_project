@@ -8,6 +8,6 @@ bool Emulator::runProgram( )
     while(true)
     {            
         long long inst = m_memory[loc];
-        int op_code = inst / 10'000'000'000;
+        int op_code = (int) (inst / 10'000'000'000LL);
     }
 }
