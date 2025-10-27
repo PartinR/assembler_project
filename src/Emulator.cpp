@@ -4,7 +4,6 @@
 bool Emulator::runProgram( )
 
 {
-    // TODO: Move to .cpp file
     int loc = 100;
     while(true)
     {            
